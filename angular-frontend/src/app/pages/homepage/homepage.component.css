@@ -1,0 +1,120 @@
+/* General styling for the homepage container */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #777;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* Styling for feature container (cards section) */
+.feature-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.feature-item {
+  text-decoration: none; /* Remove default underline */
+  display: block; /* Make the card a block element to fill the anchor */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+}
+
+/* Hover effects for the card */
+.feature-item:hover {
+  background-color: #f9fafb;
+  transform: translateY(-5px); /* Slightly lift card */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+}
+
+/* Card content styling */
+.feature-item h2 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.feature-item p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+/* Hover color change for text */
+.feature-item:hover h2, .feature-item:hover p {
+  color: #007bff; /* Blue color on hover */
+}
+
+/* Styling for call-to-action section */
+.cta {
+  margin-top: 40px;
+}
+
+.cta p {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border-radius: 30px;
+  display: inline-block;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .feature-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+  }
+}

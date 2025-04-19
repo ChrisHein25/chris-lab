@@ -1,0 +1,108 @@
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Dark Grey/Black Background */
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the icon and the text */
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff; /* White text for contrast */
+  margin: 0;
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+}
+
+/* Navbar Links Styling */
+ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+/* Navbar Links Item */
+ul li {
+  font-size: 1.1rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #fff; /* White text for the links */
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect on Links */
+ul li a:hover {
+  background-color: #555; /* Lighter grey for hover effect */
+  color: #fff; /* Keep text white */
+  transform: scale(1.05); /* Slight zoom-in effect for interactivity */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Hide the normal navbar links and show the dropdown menu */
+  ul {
+    display: none;
+  }
+
+  .nav-open {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Mobile-specific Link Styling */
+  ul li {
+    width: 100%;
+    text-align: left;
+  }
+
+  ul li a {
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  /* Dropdown Menu Button */
+  .dropdown-btn {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .dropdown-btn:hover {
+    background-color: #555;
+  }
+}
+
+/* Hide the dropdown button on larger screens */
+@media (min-width: 769px) {
+  .dropdown-btn {
+    display: none;
+  }
+}

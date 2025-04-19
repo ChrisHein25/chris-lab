@@ -1,0 +1,15 @@
+<nav>
+  <div class="logo-container">
+    <h1 class="logo">ChrisLab</h1>
+  </div>
+
+  <!-- Mobile Dropdown Button, shown only on smaller screens -->
+  <button *ngIf="isMobile" class="dropdown-btn" (click)="toggleDropdown()">☰ Menu</button>
+
+  <!-- Navbar Links -->
+  <ul [class.nav-open]="isNavOpen">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/word-counter">Word Counter</a></li>
+    <li><a routerLink="/dad-joke">Dad Joke</a></li>
+  </ul>
+</nav>
