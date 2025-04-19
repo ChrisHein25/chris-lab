@@ -4,9 +4,10 @@ import { NavbarComponent } from './common/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent],
+  standalone: true,
+  imports: [RouterOutlet, NavbarComponent],  // <-- Add HttpClientModule here
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'angular-frontend';

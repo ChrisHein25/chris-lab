@@ -1,0 +1,9 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "chris-lab"  # Update this to reflect your desired stack name
+resolve_s3 = true
+s3_prefix = "chris-lab"   # Use a prefix that makes sense for the overall app, if different
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
