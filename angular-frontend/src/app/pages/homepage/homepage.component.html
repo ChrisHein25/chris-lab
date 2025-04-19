@@ -6,14 +6,12 @@
   </p>
 
   <div class="feature-container">
-    <a routerLink="/word-counter" class="feature-item">
-      <h2>Word Counter</h2>
-      <p>Quickly count the words in your text and track your writing progress.</p>
-    </a>
-
-    <a routerLink="/dad-joke" class="feature-item">
-      <h2>Dad Joke Generator</h2>
-      <p>Need a good laugh? Get a random dad joke to brighten your day!</p>
-    </a>
+    <app-card
+      *ngFor="let feature of features"
+      [title]="feature.title"
+      [description]="feature.description"
+      [link]="feature.link"
+      [icon]="feature.icon">
+    </app-card>
   </div>
 </div>

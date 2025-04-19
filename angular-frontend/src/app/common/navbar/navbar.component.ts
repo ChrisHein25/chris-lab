@@ -1,31 +1,15 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Import CommonModule here
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule, RouterLink],
+  standalone: true,
+  imports: [RouterLink, MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnInit {
-  isNavOpen = false;
-  isMobile = false;
-
-  ngOnInit() {
-    this.checkMobileView(); // Check screen size on component load
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {  // Explicitly typing event as an Event
-    this.checkMobileView(); // Recheck on window resize
-  }
-
-  checkMobileView() {
-    this.isMobile = window.innerWidth <= 768; // Mobile screen size check
-  }
-
-  toggleDropdown() {
-    this.isNavOpen = !this.isNavOpen;
-  }
-}
+export class NavbarComponent {}

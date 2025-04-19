@@ -1,15 +1,29 @@
-<nav>
-  <div class="logo-container">
-    <h1 class="logo">ChrisLab</h1>
-  </div>
+<mat-toolbar color="primary">
+  <!-- Menu button that triggers the dropdown -->
+  <button mat-icon-button [matMenuTriggerFor]="appMenu" aria-label="Menu">
+    <mat-icon>menu</mat-icon>
+  </button>
 
-  <!-- Mobile Dropdown Button, shown only on smaller screens -->
-  <button *ngIf="isMobile" class="dropdown-btn" (click)="toggleDropdown()">☰ Menu</button>
+  <!-- Brand / Title (Simple logo with minimal CSS) -->
+  <span class="logo">
+    <mat-icon>science</mat-icon>
+    ChrisLab
+  </span>
 
-  <!-- Navbar Links -->
-  <ul [class.nav-open]="isNavOpen">
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/word-counter">Word Counter</a></li>
-    <li><a routerLink="/dad-joke">Dad Joke</a></li>
-  </ul>
-</nav>
+  <span class="spacer"></span>
+
+  <!-- Optional action icons -->
+  <button mat-icon-button aria-label="Favorite">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Share">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!-- Dropdown Menu -->
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item [routerLink]="'/'">Home</button>
+  <button mat-menu-item [routerLink]="'/word-counter'">Word Counter</button>
+  <button mat-menu-item [routerLink]="'/dad-joke'">Dad Joke</button>
+</mat-menu>

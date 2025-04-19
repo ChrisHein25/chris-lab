@@ -1,24 +1,22 @@
-/* Simple navbar styles */
-nav a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: #007bff;
+/* General styling for router wrapper */
+.router-wrapper {
+  padding-left: 16px; /* Default padding from the left */
+  padding-right: 16px; /* Default padding from the right */
+  transition: padding 0.3s ease; /* Smooth transition for padding */
 }
 
-nav a.active {
-  font-weight: bold;
-  color: #0056b3;
+/* Larger screens (e.g., tablets, desktops) */
+@media (min-width: 600px) {
+  .router-wrapper {
+    padding-left: 32px; /* More padding on larger screens */
+    padding-right: 32px; /* More padding on larger screens */
+  }
 }
 
-h1 {
-  font-family: Arial, sans-serif;
-  color: #333;
-  text-align: center;
-  margin-top: 20px;
-}
-
-hr {
-  border: 1px solid #ccc;
-  width: 80%;
-  margin: 20px auto;
+/* Very large screens (e.g., desktops) */
+@media (min-width: 1200px) {
+  .router-wrapper {
+    padding-left: 48px; /* Even more padding on large screens */
+    padding-right: 48px; /* Even more padding on large screens */
+  }
 }

@@ -1,0 +1,37 @@
+.feature-card {
+  margin: 10px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  cursor: pointer; /* Change cursor on hover */
+  padding: 16px; /* Add padding inside the card */
+  text-align: left; /* Ensure content is left-aligned */
+}
+
+.feature-card:hover {
+  transform: scale(1.05); /* Slightly scale up card on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add soft shadow on hover */
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and title */
+  margin-bottom: 8px; /* Add some space below the header */
+}
+
+.logo-icon {
+  /*font-size: 40px; !* Icon size *!*/
+  color: #3f51b5; /* Choose a color for the logo */
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.2em; /* Make the title a bit larger */
+  margin: 0;
+}
+
+.card-description {
+  font-size: 0.9em; /* Small font size for the description */
+  color: #555; /* Light gray color for description text */
+  margin-top: 10px;
+}
